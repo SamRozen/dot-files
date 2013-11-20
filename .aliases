@@ -1,0 +1,10 @@
+alias p='$HOME/anaconda/bin/python'
+alias ip='$HOME/anaconda/bin/ipython'
+alias s='source ~/.zshrc'
+alias ll='ls -lh'
+alias la='ll -a'
+
+export AISLING=aisling.lon.spotify.net
+alias aisling='ssh $AISLING'
+export EDGENODE2=lon3-edgenode-a2.lon3.spotify.net
+alias edgenode2='ssh $EDGENODE2'
