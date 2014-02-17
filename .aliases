@@ -1,10 +1,21 @@
-alias p='$HOME/anaconda/bin/python'
-alias ip='$HOME/anaconda/bin/ipython'
-alias s='source ~/.zshrc'
+alias p='/usr/bin/python'
+alias s='source ~/.bashrc'
+alias sz='source ~/.zshrc'
+alias sa='source ~/.aliases'
 alias ll='ls -lh'
 alias la='ll -a'
+alias lt='ls -lrth'
 
-export AISLING=aisling.lon.spotify.net
-alias aisling='ssh $AISLING'
-export EDGENODE2=lon3-edgenode-a2.lon3.spotify.net
-alias edgenode2='ssh $EDGENODE2'
+alias pbuild='python setup.py build'
+alias ptest='PYTHONPATH=. nosetests test'
+
+alias aread='avro-read'
+alias sb='snakebite'
+alias sls='snakebite ls'
+alias sdu='snakebite du -h'
+
+alias sbtp='sbt package'
+alias sbtt='sbt test'
+
+alias pbuild='p setup.py build'
+alias ptest='PYTHONPATH=. nosetests test'
