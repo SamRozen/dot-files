@@ -5,6 +5,7 @@ alias sa='source ~/.aliases'
 alias ll='ls -lh'
 alias la='ll -a'
 alias lt='ls -lrth'
+alias ta='tmux a'
 
 alias pbuild='python setup.py build'
 alias ptest='PYTHONPATH=. nosetests test'
