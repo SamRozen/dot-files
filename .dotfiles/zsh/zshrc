@@ -1,0 +1,25 @@
+# /usr/local
+
+# Mac OSX
+[[ "$(uname -s)" == "Darwin" ]] && . ~/.dotfiles/zsh/osx.zsh
+
+# set up terminal colors properly
+[[ "${TERM}" == "xterm" ]] && export TERM=xterm-256color
+
+# open file from X terminal
+[[ -f /usr/bin/xdg-open ]] && alias open='xdg-open'
+
+# add SSH keys
+KEYS=$(find ${HOME}/.ssh -name id_dsa -or -name id_rsa)
+[[ -z $(pidof ssh-agent) ]] && echo ${KEYS} | xargs ssh-add > /dev/null 2>&1
+
+# make SSH key forwarding work in screen and tmux
+AGENT=/tmp/ssh-agent-screen-${USER}
+test "${SSH_AUTH_SOCK}" && [[ "${SSH_AUTH_SOCK}" != "${AGENT}" ]] && ln -sf "${SSH_AUTH_SOCK}" "${AGENT}"
+test "$TMUX" && export SSH_AUTH_SOCK="${AGENT}"
+unset AGENT
+
+# fix Git completion
+__git_files () {
+    _wanted files expl "local files" _files
+}
