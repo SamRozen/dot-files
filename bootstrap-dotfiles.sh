@@ -31,8 +31,8 @@ _git() {
     cd ${HOME}
     mkdir -p src/github
     cd src/github
-    git clone git@github.com:samuelr/dot-files.git
-    git clone git@github.com:samuelr/utils.git
+    git clone https://github.com/SamRozen/utils.git
+    git clone https://github.com/SamRozen/dot-files.git
     cd ${HOME}
     ln -s ~/src/github/utils bin
     ln -s ~/src/github/dot-files/.dotfiles
