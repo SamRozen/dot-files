@@ -22,3 +22,5 @@ alias sbta='sbt assembly'
 
 alias pbuild='p setup.py build'
 alias ptest='PYTHONPATH=. nosetests test'
+
+alias ssd='sudo -u spotify-discovery'
