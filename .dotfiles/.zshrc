@@ -41,6 +41,8 @@ ZSH_THEME=""
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 #plugins=(git osx pylint python scala screen)
+[[ "$(uname)" != "Darwin" ]] && DISABLE_CORRECTION="true"
+
 plugins=(autojump colored-man git pip sbt scala zsh-syntax-highlighting)
 [[ "$(uname)" == "Darwin" ]] && plugins=(brew osx ${plugins})
 
